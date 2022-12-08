@@ -1,39 +1,190 @@
+/* 
+CONVENTION
+
+LAYOUT
+width: ;
+height: ;
+
+display: ;
+flex-direction: ;
+justify-content: ;
+align-items: ;
+gap: ;
+margin: ;
+padding: ;
+position: ;
+etc...
+
+STYLE
+background: ;
+color: ;
+font-size: ;
+etc...
+
+*/
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: white;
     /*border: 1px solid red;*/
+}
+
+/* LESS SPECIFIC CSS –– CLASSES AND GENERAL */
+em {
+    background: radial-gradient(100% 100% at 0% 100%, #8DC8FF 0%, #CFE8FF 82.81%, #CAE5FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+em2 {
+    background: radial-gradient(150% 200% at 0% 100%, #1A91FF 0%, #A0D2FF 100%, #A0D2FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+h2 {
+    font-size: xx-large;
 }
 
 body {
     width: 100%;
     height:fit-content;
-    display: block;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header * {
+    font-weight: bold;
+    font-size: large;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 header {
     /*border: 1px solid red;*/
     width: 100%;
     height: 5.25rem;
+
     display: flex;
-    padding: 0 10%;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent;
+    padding: 0 10%;
     position: fixed;
     top: 0;
+
+    background: transparent;
 }
 
-#LANDING {
-    border: 1px solid red;
-    height: 90vh;
+.SECTION-content {
+    /*border: 1px solid red;*/
+    width: 65vw;
+    height: fit-content;
+
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 15px;
+
+    background: #A0D2FF;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.section-headline {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.4vw;
+}
+
+.section-headline * {
+    font-weight: bold;
+    color: #2F2F2F;
+}
+
+.section-text *{
+    color: #2F2F2F;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5vh;
+}
+
+/*  MORE SPECIFIC CSS ––  IDs */
+
+#LANDING {
+    /*border: 1px solid red;*/
+    height: 90vh;
+
+    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 10vh 10vw;
+
+    background: radial-gradient(100% 100% at 0% 100%, #F5FAFF 0%, #82ACD3 100%);
+}
+
+#landing-content * {
+    /*border: 1px solid red;*/
+    width: 50vw;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 #landing-content {
-    display: block;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
+    width: 50vw;
+}
+
+#main-content {
+    /*border: 1px solid red;*/
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5vh;
+    padding: 10vh 10vw;
+}
+
+#skills-container * {
+    color: #2f2f2f;
+}
+
+#skills-container {
+    /*border: 1px  solid red;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10vw;
+}
+
+#skills-column {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
 }
