@@ -48,6 +48,15 @@ em2 {
     font-style: italic;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#4a9ce4;
+}
+
 h1 {
     font-size: xxx-large;
 }
@@ -66,7 +75,7 @@ body {
 
 header * {
     font-weight: bold;
-    font-size: large;
+    font-size: x-large;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -121,7 +130,7 @@ header {
     color: #2F2F2F;
 }
 
-.section-text *{
+.section-text * {
     color: #2F2F2F;
 }
 
@@ -130,6 +139,24 @@ header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5vh;
+}
+
+footer * {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    border: 1px solid red;
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+
+    background: radial-gradient(100% 100% at 0% 100%, #F5FAFF 0%, #82ACD3 100%);
 }
 
 /*  MORE SPECIFIC CSS ––  IDs */
@@ -141,6 +168,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 10vh 10vw;
 
     background: radial-gradient(100% 100% at 0% 100%, #F5FAFF 0%, #82ACD3 100%);
@@ -187,4 +215,10 @@ header {
     flex-direction: column;
     align-items: flex-start;
     gap: 2vh;
+}
+
+/* TEST */
+.adaptive-glass {
+  background: hsl(0 0% var(--glass-lightness) / 50%);
+  backdrop-filter: blur(40px);
 }
